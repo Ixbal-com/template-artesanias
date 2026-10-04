@@ -1,0 +1,284 @@
+{
+  "id": "artesanias",
+  "name": "Tienda de arte popular / Taller artesanal",
+  "version": "1.0.0",
+  "category": "tiendas",
+  "style": "Colorido mexicano: rosa mexicano, amarillo, turquesa y naranja sobre papel; collage, papel picado y notas a mano (Bricolage Grotesque, Figtree y Caveat).",
+  "description": "Para tiendas de artesanías, talleres y galerías de arte popular que venden piezas por WhatsApp, ofrecen talleres para visitantes y atienden a turistas en dos idiomas.",
+  "tags": [
+    "artesanías",
+    "tienda",
+    "catálogo",
+    "talleres",
+    "bilingüe",
+    "turismo",
+    "whatsapp"
+  ],
+  "languages": [
+    "es",
+    "en"
+  ],
+  "entry": "index.html",
+  "preview": "preview.png",
+  "sections": [
+    "encabezado",
+    "hero",
+    "historia",
+    "oficios",
+    "tienda",
+    "talleres",
+    "opiniones",
+    "visitanos",
+    "pie"
+  ],
+  "imageSlots": [
+    {
+      "id": "hero",
+      "label": "Foto principal a todo lo ancho: manos trabajando o la tienda llena de color",
+      "ratio": "panorámica (se recorta en móvil)",
+      "recommended": "1600 × 1067 px",
+      "section": "hero"
+    },
+    {
+      "id": "historia-1",
+      "label": "Interior de la tienda",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "historia"
+    },
+    {
+      "id": "historia-2",
+      "label": "Retrato de un artesano o de la fundadora",
+      "ratio": "1:1",
+      "recommended": "1000 × 1000 px",
+      "section": "historia"
+    },
+    {
+      "id": "proceso-1",
+      "label": "Oficio 1 en acción: hojalata y latón",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "oficios"
+    },
+    {
+      "id": "proceso-2",
+      "label": "Oficio 2 en acción: cerámica y barro",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "oficios"
+    },
+    {
+      "id": "proceso-3",
+      "label": "Oficio 3 en acción: textiles",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "oficios"
+    },
+    {
+      "id": "proceso-4",
+      "label": "Oficio 4 en acción: vidrio soplado",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "oficios"
+    },
+    {
+      "id": "producto-1",
+      "label": "Pieza 1 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-2",
+      "label": "Pieza 2 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-3",
+      "label": "Pieza 3 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-4",
+      "label": "Pieza 4 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-5",
+      "label": "Pieza 5 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-6",
+      "label": "Pieza 6 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-7",
+      "label": "Pieza 7 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "producto-8",
+      "label": "Pieza 8 del catálogo (fondo limpio, de frente)",
+      "ratio": "1:1",
+      "recommended": "1200 × 1200 px",
+      "section": "tienda"
+    },
+    {
+      "id": "taller-1",
+      "label": "Taller para visitantes 1",
+      "ratio": "4:3",
+      "recommended": "1600 × 1200 px",
+      "section": "talleres"
+    },
+    {
+      "id": "taller-2",
+      "label": "Taller para visitantes 2",
+      "ratio": "4:3",
+      "recommended": "1600 × 1200 px",
+      "section": "talleres"
+    },
+    {
+      "id": "visita",
+      "label": "Fachada de la tienda",
+      "ratio": "4:3",
+      "recommended": "1600 × 1200 px",
+      "section": "visitanos"
+    }
+  ],
+  "fields": [
+    {
+      "id": "businessName",
+      "label": "Nombre de la tienda o taller",
+      "type": "text",
+      "required": true,
+      "example": "Tlapalli"
+    },
+    {
+      "id": "tagline",
+      "label": "Frase principal (español e inglés)",
+      "type": "text",
+      "required": true,
+      "example": "Hecho a mano, con todo el color de México"
+    },
+    {
+      "id": "story",
+      "label": "Historia del taller (hitos con año)",
+      "type": "list",
+      "required": true,
+      "max": 4
+    },
+    {
+      "id": "crafts",
+      "label": "Oficios o técnicas (nombre, origen y descripción)",
+      "type": "list",
+      "required": true,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": "products",
+      "label": "Piezas del catálogo (nombre, oficio, origen, precio, única o vendida)",
+      "type": "list",
+      "required": true,
+      "min": 1
+    },
+    {
+      "id": "workshops",
+      "label": "Talleres para visitantes (nombre, duración, días, cupo y precio)",
+      "type": "list",
+      "required": false,
+      "max": 4
+    },
+    {
+      "id": "shipping",
+      "label": "A dónde envías",
+      "type": "text",
+      "required": false,
+      "example": "Todo México, Estados Unidos y Canadá"
+    },
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp (con lada)",
+      "type": "phone",
+      "required": true,
+      "example": "+52 415 152 8890"
+    },
+    {
+      "id": "phone",
+      "label": "Teléfono",
+      "type": "phone",
+      "required": false,
+      "example": "+52 415 152 8890"
+    },
+    {
+      "id": "email",
+      "label": "Correo",
+      "type": "email",
+      "required": false,
+      "example": "hola@tlapalli.mx"
+    },
+    {
+      "id": "address",
+      "label": "Dirección",
+      "type": "text",
+      "required": true,
+      "example": "Calle Aldama 28, Zona Centro, San Miguel de Allende, Gto."
+    },
+    {
+      "id": "hours",
+      "label": "Horario",
+      "type": "hours",
+      "required": true
+    },
+    {
+      "id": "guestbook",
+      "label": "Notas de visitantes (en su idioma original)",
+      "type": "list",
+      "required": false,
+      "max": 6
+    },
+    {
+      "id": "secondLanguage",
+      "label": "Segundo idioma",
+      "type": "select",
+      "options": [
+        "en",
+        "ninguno"
+      ],
+      "required": false,
+      "example": "en"
+    },
+    {
+      "id": "brandColors",
+      "label": "Cuatro colores de la marca",
+      "type": "list",
+      "required": false
+    },
+    {
+      "id": "logo",
+      "label": "Logo",
+      "type": "image",
+      "required": false
+    },
+    {
+      "id": "social",
+      "label": "Redes sociales",
+      "type": "links",
+      "required": false
+    }
+  ]
+}

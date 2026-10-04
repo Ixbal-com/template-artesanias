@@ -1,0 +1,64 @@
+/* Foto a todo lo ancho con el texto encima, sin botones: la historia empieza al desplazarse. */
+.hero {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: min(88vh, 54rem);
+  padding-block: var(--space-16);
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--color-on-overlay);
+}
+
+.hero > .media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  aspect-ratio: auto;
+  border-radius: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--color-scrim) 0%, transparent 70%),
+    linear-gradient(to right, var(--color-scrim) 0%, transparent 60%);
+}
+
+.hero .eyebrow {
+  color: var(--color-secondary);
+}
+
+.hero__title {
+  max-width: 13ch;
+  font-size: var(--text-3xl);
+}
+
+.hero__title em {
+  font-style: normal;
+  color: var(--color-secondary);
+}
+
+.hero__lead {
+  max-width: 32rem;
+  margin-top: var(--space-6);
+  font-size: var(--text-lg);
+}
+
+.hero__cue {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  font-family: var(--font-hand);
+  font-size: var(--text-hand);
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero__cue .icon {
+  rotate: 90deg;
+}

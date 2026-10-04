@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="es-MX" data-languages="es,en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción que aparecen en Google (en español; el inglés está en i18n/en.json) -->
+  <title data-i18n="meta.title">Tlapalli · Arte popular en San Miguel de Allende</title>
+  <meta name="description" content="Tienda y taller de arte popular en el centro de San Miguel de Allende: hojalata, latón, cerámica, barro, textiles y vidrio soplado. Talleres para visitantes y envíos." data-i18n-attr="content:meta.description">
+  <meta name="theme-color" content="#c8175d">
+
+  <!-- Vista previa al compartir en WhatsApp y redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tlapalli · Arte popular en San Miguel de Allende">
+  <meta property="og:description" content="Hojalata, barro, telar y vidrio soplado de los talleres de Guanajuato.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Caveat:wght@500;700&family=Figtree:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="assets/js/main.js"></script>
+
+  <!-- Datos estructurados para Google Maps y búsquedas locales -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Tlapalli",
+    "description": "Tienda y taller de arte popular: hojalata, latón, cerámica, barro, textiles y vidrio soplado.",
+    "knowsLanguage": ["es", "en"],
+    "telephone": "+52 415 152 8890",
+    "email": "hola@tlapalli.mx",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Aldama 28, Zona Centro",
+      "addressLocality": "San Miguel de Allende",
+      "addressRegion": "Guanajuato",
+      "postalCode": "37700",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "17:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Tlapalli, ir al inicio" data-i18n-attr="aria-label:a11y.home">
+        <img class="brand__logo" src="assets/img/logo.svg" alt="" width="40" height="40">
+        <span class="brand__name">Tlapalli <span class="brand__role" data-i18n="brand.role">arte popular</span></span>
+      </a>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal" data-i18n-attr="aria-label:a11y.nav" data-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#historia" data-i18n="nav.story">Historia</a></li>
+          <li><a class="site-nav__link" href="#oficios" data-i18n="nav.crafts">Oficios</a></li>
+          <li><a class="site-nav__link" href="#tienda" data-i18n="nav.shop">Tienda</a></li>
+          <li><a class="site-nav__link" href="#talleres" data-i18n="nav.workshops">Talleres</a></li>
+          <li><a class="site-nav__link" href="#visitanos" data-i18n="nav.visit">Visítanos</a></li>
+        </ul>
+        <a class="button button--primary button--sm" href="https://wa.me/524151528890?text=Hola%2C%20tengo%20una%20pregunta" data-i18n-attr="href:contact.whatsapp.href" data-contact="whatsapp" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#whatsapp"></use></svg>
+          <span data-i18n="nav.whatsapp">Escríbenos</span>
+        </a>
+      </nav>
+
+      <div class="site-header__tools">
+        <!-- Idiomas: cada botón cambia a su idioma; ver assets/js/modules/i18n.js -->
+        <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-attr="aria-label:a11y.language">
+          <button class="lang-switch__button" type="button" data-lang-switch="es" aria-pressed="true" lang="es">ES</button>
+          <button class="lang-switch__button" type="button" data-lang-switch="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+          <span class="visually-hidden" data-i18n="a11y.menu">Abrir menú</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ============ HERO: foto a todo lo ancho, sin botones ============ -->
+    <section class="hero" id="inicio">
+      <figure class="media" data-slot="hero">
+            <img src="images/hero.jpg" alt="Manos de artesana pintando una estrella de hojalata rodeada de piezas de colores" data-i18n-attr="alt:hero.alt" width="1536" height="1024" fetchpriority="high">
+          </figure>
+      <div class="container">
+        <p class="eyebrow" data-i18n="hero.eyebrow">San Miguel de Allende · desde 1987</p>
+        <h1 class="hero__title" data-i18n="hero.title">Hecho a mano, <em>con todo el color</em> de México</h1>
+        <p class="hero__lead" data-i18n="hero.lead">Hojalata, barro, telar y vidrio soplado de los talleres de Guanajuato.</p>
+        <a class="hero__cue" href="#historia">
+          <span data-i18n="hero.cue">Desliza para conocernos</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow-right"></use></svg>
+        </a>
+      </div>
+    </section>
+
+    <div class="papel-picado" aria-hidden="true"></div>
+
+    <!-- ============ HISTORIA ============ -->
+    <section class="section" id="historia" aria-labelledby="historia-titulo">
+      <div class="container story">
+        <div class="collage">
+          <div class="polaroid collage__main">
+            <figure class="media media--portrait" data-slot="historia-1">
+            <img src="images/historia-1.jpg" alt="Interior de la tienda con piezas de hojalata, cerámica y textiles" data-i18n-attr="alt:story.photo1.alt" width="1024" height="1536" loading="lazy">
+          </figure>
+            <p class="polaroid__caption" data-i18n="story.photo1.caption">La tienda de Aldama</p>
+          </div>
+          <div class="polaroid collage__second">
+            <figure class="media media--square" data-slot="historia-2">
+            <img src="images/historia-2.jpg" alt="Don Chuy, hojalatero, sonriendo en su taller" data-i18n-attr="alt:story.photo2.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+            <p class="polaroid__caption" data-i18n="story.photo2.caption">Don Chuy y su martillo</p>
+          </div>
+        </div>
+
+        <div class="story__content">
+          <p class="eyebrow" data-i18n="story.eyebrow">Nuestra historia</p>
+          <h2 class="section__title" id="historia-titulo" data-i18n="story.title">Treinta años <em>reuniendo manos</em></h2>
+          <p data-i18n="story.lead">Tlapalli significa «color» en náhuatl. Empezó como una mesa en el Jardín Principal y hoy es una casona donde venden su trabajo más de cuarenta familias artesanas de Guanajuato.</p>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <span class="timeline__year">1987</span>
+              <div>
+                <h3 class="timeline__title" data-i18n="story.t1.title">La primera mesa</h3>
+                <p class="timeline__text" data-i18n="story.t1.text">Aurelia Ramírez vende las estrellas de hojalata de su padre frente a la Parroquia.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2003</span>
+              <div>
+                <h3 class="timeline__title" data-i18n="story.t2.title">La casa de Aldama</h3>
+                <p class="timeline__text" data-i18n="story.t2.text">Abrimos la tienda y se suman ceramistas de Dolores Hidalgo y tejedoras de Coroneo.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year" data-i18n="story.t3.year">Hoy</span>
+              <div>
+                <h3 class="timeline__title" data-i18n="story.t3.title">Un taller abierto</h3>
+                <p class="timeline__text" data-i18n="story.t3.text">Sus nietas organizan talleres para que cualquiera se lleve algo hecho con sus propias manos.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFICIOS: carrusel horizontal ============ -->
+    <section class="section section--dark" id="oficios" aria-labelledby="oficios-titulo">
+      <div class="container crafts__header">
+        <div>
+          <p class="eyebrow" data-i18n="crafts.eyebrow">Los oficios</p>
+          <h2 class="section__title" id="oficios-titulo" data-i18n="crafts.title">Cuatro oficios, <em>una misma casa</em></h2>
+        </div>
+        <p class="crafts__hint" aria-hidden="true" data-i18n="crafts.hint">Desliza →</p>
+      </div>
+      <!-- Para agregar un oficio, copia un <li class="craft"> completo y agrega su espacio en imageSlots -->
+      <ul class="crafts__track">
+        <li class="craft">
+          <figure class="media media--portrait" data-slot="proceso-1">
+            <img src="images/proceso-1.jpg" alt="Manos de hojalatero repujando una estrella de lámina" data-i18n-attr="alt:crafts.hojalata.alt" width="1024" height="1536" loading="lazy">
+          </figure>
+          <h3 class="craft__title" data-i18n="crafts.hojalata.title">Hojalata y latón</h3>
+          <p class="craft__origin" >San Miguel de Allende</p>
+          <p class="craft__text" data-i18n="crafts.hojalata.text">La lámina se corta, se martilla y se pinta a mano. Ninguna estrella sale igual a otra.</p>
+        </li>
+        <li class="craft">
+          <figure class="media media--portrait" data-slot="proceso-2">
+            <img src="images/proceso-2.jpg" alt="Manos pintando un plato de talavera con pincel" data-i18n-attr="alt:crafts.ceramica.alt" width="1024" height="1536" loading="lazy">
+          </figure>
+          <h3 class="craft__title" data-i18n="crafts.ceramica.title">Cerámica y barro</h3>
+          <p class="craft__origin" >Dolores Hidalgo</p>
+          <p class="craft__text" data-i18n="crafts.ceramica.text">Barro de la región, pintado con esmaltes de talavera y cocido en horno de leña.</p>
+        </li>
+        <li class="craft">
+          <figure class="media media--portrait" data-slot="proceso-3">
+            <img src="images/proceso-3.jpg" alt="Tejedora trabajando en un telar de pedal con lana de colores" data-i18n-attr="alt:crafts.textiles.alt" width="1024" height="1536" loading="lazy">
+          </figure>
+          <h3 class="craft__title" data-i18n="crafts.textiles.title">Textiles</h3>
+          <p class="craft__origin" data-i18n="crafts.textiles.origin">Coroneo y San Miguel</p>
+          <p class="craft__text" data-i18n="crafts.textiles.text">Lana y algodón teñidos con plantas y tejidos en telar de pedal o de cintura.</p>
+        </li>
+        <li class="craft">
+          <figure class="media media--portrait" data-slot="proceso-4">
+            <img src="images/proceso-4.jpg" alt="Artesano soplando vidrio al rojo vivo con una caña" data-i18n-attr="alt:crafts.vidrio.alt" width="1024" height="1536" loading="lazy">
+          </figure>
+          <h3 class="craft__title" data-i18n="crafts.vidrio.title">Vidrio soplado</h3>
+          <p class="craft__origin" >San Miguel de Allende</p>
+          <p class="craft__text" data-i18n="crafts.vidrio.text">Vidrio reciclado que se sopla al rojo vivo; cada burbuja queda como firma.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ TIENDA: catálogo con filtros ============ -->
+    <section class="section" id="tienda" aria-labelledby="tienda-titulo">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow" data-i18n="shop.eyebrow">La tienda</p>
+          <h2 class="section__title" id="tienda-titulo" data-i18n="shop.title">Piezas para <em>llevarte a casa</em></h2>
+          <p class="section__lead" data-i18n="shop.lead">Muchas son piezas únicas. Escríbenos y te apartamos la tuya o te la enviamos.</p>
+        </header>
+
+        <!-- Filtros: data-filter debe coincidir con el data-category de cada producto -->
+        <div class="filters" role="group" aria-label="Filtrar por oficio" data-i18n-attr="aria-label:shop.filter.label" data-filters hidden>
+          <button class="filter" type="button" data-filter="all" aria-pressed="true" data-i18n="shop.filter.all">Todo</button>
+          <button class="filter" type="button" data-filter="hojalata" aria-pressed="false" data-i18n="shop.filter.hojalata">Hojalata y latón</button>
+          <button class="filter" type="button" data-filter="ceramica" aria-pressed="false" data-i18n="shop.filter.ceramica">Cerámica y barro</button>
+          <button class="filter" type="button" data-filter="textiles" aria-pressed="false" data-i18n="shop.filter.textiles">Textiles</button>
+          <button class="filter" type="button" data-filter="vidrio" aria-pressed="false" data-i18n="shop.filter.vidrio">Vidrio soplado</button>
+        </div>
+
+        <!-- Para agregar una pieza, copia un <li class="product"> completo: nuevo data-slot (imageSlots) y nuevas claves en i18n/en.json.
+             Pieza única: agrega el badge "Pieza única". Vendida: clase product--sold, badge "Vendida" y el texto en lugar del botón. -->
+        <ul class="products">
+          <li class="product" data-category="hojalata">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-1">
+            <img src="images/producto-1.jpg" alt="Espejo con marco de hojalata repujada y pintada a mano" data-i18n-attr="alt:shop.producto-1.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-1.name">Espejo de hojalata pintada</h3>
+            <p class="product__origin" data-i18n="shop.producto-1.origin">Taller Ramírez, San Miguel</p>
+            <div class="product__footer">
+              <span class="product__price">$1,450 MXN</span>
+              <a class="button button--outline button--sm" href="https://wa.me/524151528890?text=Hola%2C%20me%20interesa%3A%20Espejo%20de%20hojalata%20pintada" data-i18n-attr="href:shop.producto-1.href" data-contact="whatsapp" target="_blank" rel="noopener"><span data-i18n="shop.want">La quiero</span></a>
+            </div>
+          </li>
+          <li class="product" data-category="hojalata">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-2">
+            <img src="images/producto-2.jpg" alt="Corazón de latón calado para colgar" data-i18n-attr="alt:shop.producto-2.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-2.name">Corazón de latón calado</h3>
+            <p class="product__origin" >San Miguel de Allende</p>
+            <div class="product__footer">
+              <span class="product__price">$680 MXN</span>
+              <a class="button button--outline button--sm" href="https://wa.me/524151528890?text=Hola%2C%20me%20interesa%3A%20Coraz%C3%B3n%20de%20lat%C3%B3n%20calado" data-i18n-attr="href:shop.producto-2.href" data-contact="whatsapp" target="_blank" rel="noopener"><span data-i18n="shop.want">La quiero</span></a>
+            </div>
+          </li>
+          <li class="product" data-category="ceramica">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-3">
+            <img src="images/producto-3.jpg" alt="Plato de talavera pintado en azul cobalto y amarillo" data-i18n-attr="alt:shop.producto-3.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-3.name">Plato de talavera</h3>
+            <p class="product__origin" >Dolores Hidalgo</p>
+            <div class="product__footer">
+              <span class="product__price">$890 MXN</span>
+              <a class="button button--outline button--sm" href="https://wa.me/524151528890?text=Hola%2C%20me%20interesa%3A%20Plato%20de%20talavera" data-i18n-attr="href:shop.producto-3.href" data-contact="whatsapp" target="_blank" rel="noopener"><span data-i18n="shop.want">La quiero</span></a>
+            </div>
+          </li>
+          <li class="product product--sold" data-category="ceramica">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-4">
+            <img src="images/producto-4.jpg" alt="Olla de barro bruñido con dibujos geométricos" data-i18n-attr="alt:shop.producto-4.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+              <p class="product__badges"><span class="badge" data-i18n="shop.badge.unique">Pieza única</span><span class="badge badge--sold" data-i18n="shop.badge.sold">Vendida</span></p>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-4.name">Olla de barro bruñido</h3>
+            <p class="product__origin" >Dolores Hidalgo</p>
+            <div class="product__footer">
+              <span class="product__price">$1,200 MXN</span>
+              <span class="product__sold-note" data-i18n="shop.soldNote">Pregunta por otra parecida</span>
+            </div>
+          </li>
+          <li class="product" data-category="textiles">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-5">
+            <img src="images/producto-5.jpg" alt="Rebozo de algodón teñido a mano en rosa y naranja" data-i18n-attr="alt:shop.producto-5.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-5.name">Rebozo teñido a mano</h3>
+            <p class="product__origin" >San Miguel de Allende</p>
+            <div class="product__footer">
+              <span class="product__price">$2,300 MXN</span>
+              <a class="button button--outline button--sm" href="https://wa.me/524151528890?text=Hola%2C%20me%20interesa%3A%20Rebozo%20te%C3%B1ido%20a%20mano" data-i18n-attr="href:shop.producto-5.href" data-contact="whatsapp" target="_blank" rel="noopener"><span data-i18n="shop.want">La quiero</span></a>
+            </div>
+          </li>
+          <li class="product" data-category="textiles">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-6">
+            <img src="images/producto-6.jpg" alt="Tapete de lana tejido en telar con grecas de colores" data-i18n-attr="alt:shop.producto-6.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+              <p class="product__badges"><span class="badge" data-i18n="shop.badge.unique">Pieza única</span></p>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-6.name">Tapete de lana de Coroneo</h3>
+            <p class="product__origin" >Coroneo, Guanajuato</p>
+            <div class="product__footer">
+              <span class="product__price">$3,900 MXN</span>
+              <a class="button button--outline button--sm" href="https://wa.me/524151528890?text=Hola%2C%20me%20interesa%3A%20Tapete%20de%20lana%20de%20Coroneo" data-i18n-attr="href:shop.producto-6.href" data-contact="whatsapp" target="_blank" rel="noopener"><span data-i18n="shop.want">La quiero</span></a>
+            </div>
+          </li>
+          <li class="product" data-category="vidrio">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-7">
+            <img src="images/producto-7.jpg" alt="Cuatro vasos de vidrio soplado con borde de color" data-i18n-attr="alt:shop.producto-7.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-7.name">Vasos de vidrio soplado (4)</h3>
+            <p class="product__origin" >San Miguel de Allende</p>
+            <div class="product__footer">
+              <span class="product__price">$980 MXN</span>
+              <a class="button button--outline button--sm" href="https://wa.me/524151528890?text=Hola%2C%20me%20interesa%3A%20Vasos%20de%20vidrio%20soplado%20%284%29" data-i18n-attr="href:shop.producto-7.href" data-contact="whatsapp" target="_blank" rel="noopener"><span data-i18n="shop.want">La quiero</span></a>
+            </div>
+          </li>
+          <li class="product product--sold" data-category="vidrio">
+            <div class="product__visual">
+              <figure class="media media--square" data-slot="producto-8">
+            <img src="images/producto-8.jpg" alt="Jarra de vidrio soplado con borde azul cobalto" data-i18n-attr="alt:shop.producto-8.alt" width="1024" height="1024" loading="lazy">
+          </figure>
+              <p class="product__badges"><span class="badge" data-i18n="shop.badge.unique">Pieza única</span><span class="badge badge--sold" data-i18n="shop.badge.sold">Vendida</span></p>
+            </div>
+            <h3 class="product__name" data-i18n="shop.producto-8.name">Jarra con borde cobalto</h3>
+            <p class="product__origin" >San Miguel de Allende</p>
+            <div class="product__footer">
+              <span class="product__price">$1,150 MXN</span>
+              <span class="product__sold-note" data-i18n="shop.soldNote">Pregunta por otra parecida</span>
+            </div>
+          </li>
+        </ul>
+
+        <p class="shipping">
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#truck"></use></svg>
+          <span data-i18n="shop.shipping">Enviamos a todo México, Estados Unidos y Canadá. Empacamos cada pieza a mano.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ TALLERES PARA VISITANTES ============ -->
+    <section class="section section--sun" id="talleres" aria-labelledby="talleres-titulo">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow" data-i18n="workshops.eyebrow">Talleres</p>
+          <h2 class="section__title" id="talleres-titulo" data-i18n="workshops.title">Llévate algo <em>hecho por ti</em></h2>
+          <p class="section__lead" data-i18n="workshops.lead">Grupos pequeños, todo el material incluido y en español o inglés.</p>
+        </header>
+
+        <article class="workshop">
+          <div class="workshop__visual">
+            <figure class="media" data-slot="taller-1">
+            <img src="images/taller-1.jpg" alt="Visitantes pintando platos de talavera en una mesa larga" data-i18n-attr="alt:workshops.talavera.alt" width="1536" height="1024" loading="lazy">
+          </figure>
+          </div>
+          <div class="workshop__content">
+            <h3 class="workshop__title" data-i18n="workshops.talavera.title">Pinta tu talavera</h3>
+            <p class="workshop__text" data-i18n="workshops.talavera.text">Decora un plato con pinceles y esmaltes tradicionales. Lo horneamos y te lo enviamos, o pasas por él una semana después.</p>
+            <dl class="workshop__details">
+              <div><dt data-i18n="workshops.label.duration">Duración</dt><dd data-i18n="workshops.talavera.duration">3 horas</dd></div>
+              <div><dt data-i18n="workshops.label.when">Cuándo</dt><dd data-i18n="workshops.talavera.when">Martes y jueves, 10:00</dd></div>
+              <div><dt data-i18n="workshops.label.group">Cupo</dt><dd data-i18n="workshops.talavera.group">8 personas</dd></div>
+              <div><dt data-i18n="workshops.label.price">Precio</dt><dd>$1,200 MXN</dd></div>
+            </dl>
+            <a class="button button--primary button--lg" href="https://wa.me/524151528890?text=Hola%2C%20quiero%20reservar%20el%20taller%20Pinta%20tu%20talavera" data-i18n-attr="href:workshops.talavera.href" data-contact="whatsapp" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#whatsapp"></use></svg>
+              <span data-i18n="workshops.book">Reservar lugar</span>
+            </a>
+          </div>
+        </article>
+        <article class="workshop">
+          <div class="workshop__visual">
+            <figure class="media" data-slot="taller-2">
+            <img src="images/taller-2.jpg" alt="Visitantes repujando estrellas de hojalata con un maestro artesano" data-i18n-attr="alt:workshops.hojalata.alt" width="1536" height="1024" loading="lazy">
+          </figure>
+          </div>
+          <div class="workshop__content">
+            <h3 class="workshop__title" data-i18n="workshops.hojalata.title">Hojalata para principiantes</h3>
+            <p class="workshop__text" data-i18n="workshops.hojalata.text">Corta, repuja y pinta tu propia estrella o corazón con Don Chuy, hojalatero desde hace cincuenta años.</p>
+            <dl class="workshop__details">
+              <div><dt data-i18n="workshops.label.duration">Duración</dt><dd data-i18n="workshops.hojalata.duration">2 ½ horas</dd></div>
+              <div><dt data-i18n="workshops.label.when">Cuándo</dt><dd data-i18n="workshops.hojalata.when">Miércoles y sábado, 11:00</dd></div>
+              <div><dt data-i18n="workshops.label.group">Cupo</dt><dd data-i18n="workshops.hojalata.group">6 personas</dd></div>
+              <div><dt data-i18n="workshops.label.price">Precio</dt><dd>$950 MXN</dd></div>
+            </dl>
+            <a class="button button--primary button--lg" href="https://wa.me/524151528890?text=Hola%2C%20quiero%20reservar%20el%20taller%20Hojalata%20para%20principiantes" data-i18n-attr="href:workshops.hojalata.href" data-contact="whatsapp" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#whatsapp"></use></svg>
+              <span data-i18n="workshops.book">Reservar lugar</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LIBRO DE VISITAS (se dejan en el idioma original de cada visitante) ============ -->
+    <section class="section" id="opiniones" aria-labelledby="opiniones-titulo">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow" data-i18n="guestbook.eyebrow">Libro de visitas</p>
+          <h2 class="section__title" id="opiniones-titulo" data-i18n="guestbook.title">Lo que nos <em>dejan escrito</em></h2>
+        </header>
+        <ul class="notes">
+          <li class="note">
+            <p>¡Pintamos platos en familia y fue lo mejor del viaje!</p>
+            <p class="note__author">— Familia Ortega, Querétaro</p>
+          </li>
+          <li class="note" lang="en">
+            <p>Best afternoon in San Miguel. Don Chuy is a legend!</p>
+            <p class="note__author">— Karen &amp; Mike, Austin TX</p>
+          </li>
+          <li class="note">
+            <p>Le regalé un rebozo a mi mamá y lloró. Gracias por tanto cuidado.</p>
+            <p class="note__author">— Daniela, CDMX</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ VISÍTANOS ============ -->
+    <section class="section section--sun" id="visitanos" aria-labelledby="visitanos-titulo">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="status-badge" data-open-status data-text-open="Abierto ahora · cierra a las {close}" data-text-closed="Cerrado en este momento" data-i18n-attr="data-text-open:visit.status.open; data-text-closed:visit.status.closed" hidden></p>
+          <p class="eyebrow" data-i18n="visit.eyebrow">Visítanos</p>
+          <h2 class="section__title" id="visitanos-titulo" data-i18n="visit.title">A dos cuadras <em>del Jardín</em></h2>
+
+          <ul class="contact-list">
+            <li class="contact-list__item">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#pin"></use></svg>
+              <span>Calle Aldama 28, Zona Centro, San Miguel de Allende, Gto.</span>
+            </li>
+            <li class="contact-list__item">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#phone"></use></svg>
+              <a href="tel:+524151528890" data-contact="phone">+52 415 152 8890</a>
+            </li>
+            <li class="contact-list__item">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#mail"></use></svg>
+              <a href="mailto:hola@tlapalli.mx">hola@tlapalli.mx</a>
+            </li>
+          </ul>
+
+          <!-- Horario: data-days usa 0 = domingo … 6 = sábado; horas en formato 24 h -->
+          <h3 class="contact__subtitle" data-i18n="visit.hours">Horario</h3>
+          <table class="hours" data-hours>
+            <tbody>
+              <tr data-days="1,2,3,4,5,6" data-open="10:00" data-close="19:00">
+                <th scope="row" data-i18n="visit.days.weekdays">Lunes a sábado</th>
+                <td data-i18n="visit.time.weekdays">10:00 a 19:00</td>
+              </tr>
+              <tr data-days="0" data-open="11:00" data-close="17:00">
+                <th scope="row" data-i18n="visit.days.sunday">Domingo</th>
+                <td data-i18n="visit.time.sunday">11:00 a 17:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="contact__visual">
+          <figure class="media" data-slot="visita">
+            <img src="images/visita.jpg" alt="Fachada de Tlapalli en una calle empedrada del centro de San Miguel de Allende" data-i18n-attr="alt:visit.alt" width="1536" height="1024" loading="lazy">
+          </figure>
+        </div>
+
+        <div class="contact__map">
+          <iframe
+            title="Ubicación de Tlapalli en el mapa" data-i18n-attr="title:visit.map"
+            src="https://www.google.com/maps?q=Calle+Aldama+28+Centro+San+Miguel+de+Allende&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="site-footer">
+    <div class="papel-picado" aria-hidden="true"></div>
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">Tlapalli</p>
+      <ul class="social-list">
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#instagram"></use></svg></a></li>
+        <li><a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#facebook"></use></svg></a></li>
+      </ul>
+      <p>© <span data-current-year>2026</span> Tlapalli. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/524151528890?text=Hola%2C%20tengo%20una%20pregunta" aria-label="Escríbenos por WhatsApp" data-i18n-attr="href:contact.whatsapp.href; aria-label:a11y.whatsapp" data-contact="whatsapp" target="_blank" rel="noopener">
+    <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#whatsapp"></use></svg>
+  </a>
+</body>
+</html>

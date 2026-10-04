@@ -1,0 +1,16 @@
+/*
+ * Tira de papel picado. La forma sale de papel-picado.svg (como máscara) y los
+ * colores de los tokens, así que cambia sola si cambias la paleta.
+ */
+.papel-picado {
+  height: 3.75rem;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-primary) 0 7.5rem,
+    var(--color-secondary) 7.5rem 15rem,
+    var(--color-tertiary) 15rem 22.5rem,
+    var(--color-quaternary) 22.5rem 30rem
+  );
+  -webkit-mask: url("../../img/papel-picado.svg") 0 0 / 7.5rem 100% repeat-x;
+  mask: url("../../img/papel-picado.svg") 0 0 / 7.5rem 100% repeat-x;
+}

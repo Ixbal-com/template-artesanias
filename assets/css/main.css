@@ -1,0 +1,27 @@
+/*
+ * Punto de entrada de estilos. El orden de las capas define la prioridad:
+ * una regla en "sections" gana sobre "components" sin importar su especificidad.
+ * Para agregar un archivo nuevo, impórtalo aquí en la capa que le corresponde.
+ */
+@layer tokens, base, layout, components, sections, utilities;
+
+@import url("tokens.css") layer(tokens);
+@import url("base.css") layer(base);
+@import url("layout.css") layer(layout);
+
+@import url("components/button.css") layer(components);
+@import url("components/media.css") layer(components);
+@import url("components/papel-picado.css") layer(components);
+@import url("components/header.css") layer(components);
+@import url("components/footer.css") layer(components);
+@import url("components/whatsapp-float.css") layer(components);
+
+@import url("sections/hero.css") layer(sections);
+@import url("sections/story.css") layer(sections);
+@import url("sections/crafts.css") layer(sections);
+@import url("sections/shop.css") layer(sections);
+@import url("sections/workshops.css") layer(sections);
+@import url("sections/guestbook.css") layer(sections);
+@import url("sections/visit.css") layer(sections);
+
+@import url("utilities.css") layer(utilities);

@@ -1,0 +1,84 @@
+/*
+ * Tokens de diseño: el único lugar donde viven colores, tipografía, espacios y radios.
+ * Para cambiar la identidad del negocio, edita solo este archivo.
+ * Estilo: colorido mexicano (rosa mexicano, amarillo, turquesa y naranja sobre papel;
+ * composición tipo collage y detalles escritos a mano).
+ */
+:root {
+  /* Marca: los cuatro colores del papel picado */
+  --color-primary: #c8175d;
+  --color-primary-hover: #a1104a;
+  --color-primary-soft: #fbe2ec;
+  --color-secondary: #f3b223;
+  --color-secondary-soft: #fdf0c9;
+  --color-tertiary: #0f7f7b;
+  --color-tertiary-soft: #d9efed;
+  --color-quaternary: #e5652a;
+  --color-on-primary: #ffffff;
+
+  /* Neutros */
+  --color-text: #2b1a2f;
+  --color-text-muted: #6d5b70;
+  --color-background: #fbf5ec;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4ead9;
+  --color-border: #e8dcc8;
+  --color-inverse: #2b1a2f;
+  --color-on-inverse: #fbf5ec;
+  --color-on-inverse-muted: rgb(251 245 236 / 0.72);
+  --color-on-primary-border: rgb(251 245 236 / 0.18);
+
+  /* Estados */
+  --color-success: #1f8a4c;
+  --color-danger: #c0392b;
+  --color-whatsapp: #25d366;
+  --color-on-whatsapp: #ffffff;
+
+  /* Sombra para leer texto sobre fotos y etiqueta de espacios de imagen pendientes */
+  --color-scrim: rgb(28 12 30 / 0.78);
+  --color-overlay: rgb(43 26 47 / 0.75);
+  --color-on-overlay: #ffffff;
+
+  /* Tipografía */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.4rem;
+  --text-hand: 1.6rem;
+  --text-2xl: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+  --text-3xl: clamp(3.25rem, 1.6rem + 7vw, 7.5rem);
+  --leading-tight: 0.98;
+  --leading-normal: 1.6;
+
+  /* Espacios */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-section: clamp(4.5rem, 3rem + 6vw, 8rem);
+
+  /* Formas */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 999px;
+  --shadow-sm: 0 2px 6px rgb(43 26 47 / 0.12);
+  --shadow-md: 0 18px 36px -18px rgb(43 26 47 / 0.4);
+
+  /* Layout */
+  --container-width: 76rem;
+  --container-narrow: 48rem;
+  --container-gutter: 1.25rem;
+  --header-height: 4.75rem;
+
+  /* Movimiento */
+  --transition-fast: 150ms ease;
+}

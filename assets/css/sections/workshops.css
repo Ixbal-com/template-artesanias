@@ -1,0 +1,61 @@
+/* Talleres en filas alternadas con foto y ficha de detalles. */
+.workshop {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.workshop + .workshop {
+  margin-top: var(--space-16);
+}
+
+@media (min-width: 56rem) {
+  .workshop {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-16);
+  }
+
+  .workshop:nth-child(even) .workshop__visual {
+    order: 2;
+  }
+}
+
+.workshop__visual .media {
+  box-shadow: 0.75rem 0.75rem 0 var(--color-primary);
+}
+
+.workshop:nth-child(even) .workshop__visual .media {
+  box-shadow: -0.75rem 0.75rem 0 var(--color-tertiary);
+}
+
+.workshop__title {
+  font-size: calc(var(--text-xl) * 1.5);
+  letter-spacing: -0.03em;
+}
+
+.workshop__text {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+.workshop__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+.workshop__details dt {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.workshop__details dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+}

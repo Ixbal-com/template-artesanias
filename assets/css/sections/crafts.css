@@ -1,0 +1,68 @@
+/* Los oficios en un carrusel horizontal que se desliza con el dedo o el trackpad. */
+.crafts__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.crafts__hint {
+  font-family: var(--font-hand);
+  font-size: var(--text-hand);
+  color: var(--color-secondary);
+}
+
+.crafts__track {
+  --track-inset: max(var(--container-gutter), calc((100% - var(--container-width)) / 2));
+  display: grid;
+  grid-auto-columns: min(80vw, 21rem);
+  grid-auto-flow: column;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0 var(--track-inset) var(--space-6);
+  overflow-x: auto;
+  scroll-padding-inline: var(--track-inset);
+  scroll-snap-type: x mandatory;
+  list-style: none;
+}
+
+.craft {
+  scroll-snap-align: start;
+  padding-top: var(--space-4);
+  border-top: 4px solid var(--color-primary);
+}
+
+.craft:nth-child(2) {
+  border-color: var(--color-secondary);
+}
+
+.craft:nth-child(3) {
+  border-color: var(--color-tertiary);
+}
+
+.craft:nth-child(4) {
+  border-color: var(--color-quaternary);
+}
+
+.craft .media {
+  border-radius: var(--radius-md);
+}
+
+.craft__title {
+  margin-top: var(--space-6);
+  font-size: var(--text-xl);
+  letter-spacing: -0.02em;
+}
+
+.craft__origin {
+  font-family: var(--font-hand);
+  font-size: var(--text-xl);
+  color: var(--color-secondary);
+}
+
+.craft__text {
+  margin-top: var(--space-2);
+  color: var(--color-on-inverse-muted);
+}

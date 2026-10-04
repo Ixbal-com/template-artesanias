@@ -1,0 +1,112 @@
+/* Collage de fotos tipo polaroid con cinta, junto a una línea del tiempo. */
+.story {
+  display: grid;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+@media (min-width: 56rem) {
+  .story {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.collage {
+  position: relative;
+  padding-bottom: var(--space-16);
+}
+
+.polaroid {
+  position: relative;
+  padding: var(--space-3) var(--space-3) var(--space-2);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.polaroid .media {
+  border-radius: 2px;
+}
+
+.polaroid::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-3) * -1);
+  left: 50%;
+  z-index: 1;
+  width: 5.5rem;
+  height: 1.6rem;
+  translate: -50% 0;
+  rotate: -4deg;
+  background: color-mix(in srgb, var(--color-secondary) 75%, transparent);
+}
+
+.polaroid__caption {
+  padding-top: var(--space-2);
+  font-family: var(--font-hand);
+  font-size: var(--text-xl);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.collage__main {
+  width: 78%;
+  rotate: -2.5deg;
+}
+
+/* La segunda foto tapa la esquina derecha: el pie de la primera va a la izquierda. */
+.collage__main .polaroid__caption {
+  text-align: left;
+}
+
+.collage__second {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  rotate: 4deg;
+}
+
+.story__content > p:not(.eyebrow) {
+  margin-top: var(--space-6);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+.timeline {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: var(--space-4);
+}
+
+.timeline__year {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-tertiary);
+}
+
+.timeline__item:nth-child(2) .timeline__year {
+  color: var(--color-quaternary);
+}
+
+.timeline__item:nth-child(3) .timeline__year {
+  color: var(--color-primary);
+}
+
+.timeline__title {
+  font-size: var(--text-lg);
+  letter-spacing: -0.01em;
+}
+
+.timeline__text {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,53 @@
+/* Notas del libro de visitas: papelitos de colores escritos a mano. */
+.notes {
+  display: grid;
+  gap: var(--space-12) var(--space-8);
+  padding: var(--space-4) 0 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.note {
+  position: relative;
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  background: var(--color-secondary-soft);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-hand);
+  font-size: var(--text-hand);
+  line-height: 1.2;
+  rotate: -1.5deg;
+}
+
+.note:nth-child(2) {
+  background: var(--color-primary-soft);
+  rotate: 1.5deg;
+}
+
+.note:nth-child(3) {
+  background: var(--color-tertiary-soft);
+  rotate: -0.5deg;
+}
+
+.note::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-3) * -1);
+  left: 50%;
+  width: 4.5rem;
+  height: 1.4rem;
+  translate: -50% 0;
+  rotate: 3deg;
+  background: color-mix(in srgb, var(--color-surface) 70%, transparent);
+  box-shadow: var(--shadow-sm);
+}
+
+.note__author {
+  margin-top: var(--space-4);
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+}
