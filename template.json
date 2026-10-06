@@ -20,6 +20,7 @@
   ],
   "entry": "index.html",
   "preview": "preview.png",
+  "modules": ["catalog-filter", "i18n"],
   "sections": [
     "encabezado",
     "hero",
