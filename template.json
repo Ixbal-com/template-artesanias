@@ -3,6 +3,7 @@
   "name": "Tienda de arte popular / Taller artesanal",
   "version": "1.0.0",
   "category": "tiendas",
+  "uses": ["vender", "inscripciones"],
   "style": "Colorido mexicano: rosa mexicano, amarillo, turquesa y naranja sobre papel; collage, papel picado y notas a mano (Bricolage Grotesque, Figtree y Caveat).",
   "description": "Para tiendas de artesanías, talleres y galerías de arte popular que venden piezas por WhatsApp, ofrecen talleres para visitantes y atienden a turistas en dos idiomas.",
   "tags": [
